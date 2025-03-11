@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Interaktive Stadtführung durch Dresden</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung zur CSS-Datei -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Verlinkung zur CSS-Datei -->
 </head>
 <body>
 <header>
     <h1>Interaktive Stadtführung durch Dresden</h1>
-    <img src="./bilder/Wappen_Dresden.png" alt="Wappen von Dresden" class="dresden-wappen">
+    <img src="../bilder/Wappen_Dresden.png" alt="Wappen von Dresden" class="dresden-wappen">
     <nav>
         <ul>
             <li><a href="index.html">Startseite</a></li>
@@ -24,7 +24,7 @@
                     <li><a href="Goldener_Reiter.html">Goldner Reiter</a></li>
                     <li><a href="Palais_Grosser_Garten.html">Palais Großer Garten</a></li>
                     <li><a href="Semperoper.html">Semperoper</a></li>
-                    <li><a href="Grünes_Gewölbe.html">Grünes Gewölbe</a></li>
+                    <li><a href="Gruenes_Gewoelbe.html">Grünes Gewölbe</a></li>
                 </ul>
             </li>
         </ul>
@@ -36,15 +36,19 @@
         <section>
             <h2>Kontaktieren Sie uns</h2>
             <p>Wir freuen uns über Ihr Interesse! Wenn Sie Fragen haben oder weitere Informationen benötigen, können Sie uns über das folgende Formular kontaktieren:</p>
-            <form action="kontaktformular_verarbeiten.php" method="post">
+            
+            <form id="contactForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
+                <span id="nameError" class="error-message"></span>
 
                 <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
+                <span id="emailError" class="error-message"></span>
 
                 <label for="nachricht">Nachricht:</label>
-                <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+                <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+                <span id="messageError" class="error-message"></span>
 
                 <label for="newsletter">
                     <input type="checkbox" id="newsletter" name="newsletter">
@@ -53,6 +57,9 @@
 
                 <button type="submit">Absenden</button>
             </form>
+
+            <p id="successMessage" class="success-message"></p>
+			<div id="submittedMessage" class="submitted-message"></div>
         </section>
 
         <section>
@@ -80,5 +87,6 @@
 <footer>
     <p>&copy; 2023 Interaktive Stadtführung durch Dresden. Alle Rechte vorbehalten.</p>
 </footer>
+<script src="../js/kontakt.js"></script>
 </body>
 </html>
