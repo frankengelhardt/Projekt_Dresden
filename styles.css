@@ -14,7 +14,7 @@ body {
     min-height: 100vh; /* Stellt sicher, dass der Body mindestens die volle Viewport-Höhe einnimmt */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-image: url('../bilder/brühlscheterrasse.jpg');
+    background-image: url('./bilder/brühlscheterrasse.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
